@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnagLine Clips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow reading column; sticky nav; sections switch by hash (#home, #terms, #privacy) */
+:root{--bg:#f4fbfc;--ink:#0b1a1f;--muted:#4b6068;--accent:#00a9b8;--line:#cfe3e7;--card:#ffffff;
+--display:"Sora",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#03141a;--ink:#e6f6f8;--muted:#8fb0b8;--accent:#27e3f2;--line:#13303a;--card:#082029;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#03141a;--ink:#e6f6f8;--muted:#8fb0b8;--accent:#27e3f2;--line:#13303a;--card:#082029;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:760px;margin:0 auto;padding:20px 16px 8px}
+header img{width:44px;height:44px;border-radius:10px}
+header .name{font:700 20px var(--display);letter-spacing:.2px}
+nav{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;font-weight:600}
+nav a:hover,nav a.on{color:var(--ink);background:var(--card);outline:1px solid var(--line)}
+nav a:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{max-width:760px;margin:0 auto;padding:12px 16px 64px}
+section{display:none}
+section.on{display:block}
+h1{font:700 clamp(28px,5vw,40px)/1.15 var(--display);margin:24px 0 12px;text-wrap:balance}
+h2{font:600 21px var(--display);margin:32px 0 8px;text-wrap:balance}
+p,li{max-width:65ch}
+.lead{font-size:19px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:20px 0}
+.updated{color:var(--muted);font-size:15px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+<img alt="SnagLine Clips logo" src="data:image/jpeg;base64,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">
+<span class="name">SnagLine Clips</span>
+<nav aria-label="Pages"><a href="#home" data-s="home">Home</a><a href="#terms" data-s="terms">Terms of Service</a><a href="#privacy" data-s="privacy">Privacy Policy</a></nav>
+</header>
+<main>
+
+<section id="home">
+<h1>Short clips from live streams, ready to post</h1>
+<p class="lead">SnagLine Clips is a clipping channel. It finds the loudest, funniest and most surprising moments in live streams, cuts them into vertical videos with captions, and shares them on Instagram, Facebook, YouTube and TikTok.</p>
+<div class="card">
+<h2 style="margin-top:0">How the TikTok connection works</h2>
+<p>SnagLine Clips uses TikTok Login Kit so the account owner can sign in once. It then uses the Content Posting API to send finished clips to that same account as drafts. The account owner reviews each draft in the TikTok app and chooses whether to post it.</p>
+</div>
+<h2>What we make</h2>
+<ul>
+<li>Vertical 9:16 clips, usually under a minute.</li>
+<li>Burned-in captions and a caption that tags the streamer.</li>
+<li>Posts to our own accounts only: @snaglineclips on Instagram, SnagLine Clips on Facebook.</li>
+</ul>
+<p>Questions? Message @snaglineclips on Instagram.</p>
+</section>
+
+<section id="terms">
+<h1>Terms of Service</h1>
+<p class="updated">Last updated November 18, 2026</p>
+<h2>1. Who we are</h2>
+<p>SnagLine Clips ("we", "us") is a short-form video clipping channel operated by an individual creator. These terms apply to the SnagLine Clips website and to the SnagLine Clips tool that connects to TikTok and other social platforms.</p>
+<h2>2. What the tool does</h2>
+<p>The tool records public live streams, cuts short clips, and uploads them to accounts owned by the SnagLine Clips operator. It does not post to anyone else's account.</p>
+<h2>3. Your use of the service</h2>
+<p>You may view the clips we publish and share them on the platforms where they appear. You may not use our clips to harass anyone, to mislead people about what a streamer said, or to break the rules of any platform.</p>
+<h2>4. Streamer content</h2>
+<p>Clips contain moments from streams made by other creators. Those moments belong to the streamers and their platforms. We tag the creator in every caption, and we remove a clip on request. To ask for removal, message @snaglineclips on Instagram.</p>
+<h2>5. Third-party platforms</h2>
+<p>Our tool works through TikTok, Instagram, Facebook and YouTube. Their own terms apply when you use them. If a platform changes or removes access, parts of our service can stop working.</p>
+<h2>6. No warranty</h2>
+<p>The service is provided as is. We do not promise that clips will always post, that they will be accurate, or that the tool will run without interruption.</p>
+<h2>7. Changes</h2>
+<p>We may update these terms. The date at the top shows the latest version. Using the service after a change means you accept it.</p>
+</section>
+
+<section id="privacy">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated November 18, 2026</p>
+<h2>What we collect</h2>
+<p>When the account owner connects TikTok through Login Kit, we receive the TikTok open ID, display name and avatar, and an access token. The website itself does not set cookies, run analytics or ask for any personal details.</p>
+<h2>How we use it</h2>
+<p>We use the access token only to upload finished clips to the connected account as drafts. We do not use it to read private messages, follow accounts or collect data about other people.</p>
+<h2>Where it is stored</h2>
+<p>Tokens stay on the operator's own computer. We do not sell them, share them, or send them to anyone other than TikTok.</p>
+<h2>Viewers</h2>
+<p>People who watch our clips on TikTok, Instagram, Facebook or YouTube are covered by those platforms' own privacy policies. We do not receive their personal data.</p>
+<h2>Your choices</h2>
+<p>You can disconnect SnagLine Clips at any time in TikTok under Settings, Security and permissions, then Apps and websites. After that, our access token stops working. To ask us to delete anything we hold, message @snaglineclips on Instagram.</p>
+<h2>Changes</h2>
+<p>We will update this page if we change how we handle data. The date at the top shows the latest version.</p>
+</section>
+
+</main>
+<script>
+(function(){
+  var ids=["home","terms","privacy"];
+  function show(){
+    var h=(location.hash||"#home").slice(1);
+    if(ids.indexOf(h)<0)h="home";
+    ids.forEach(function(id){
+      document.getElementById(id).classList.toggle("on",id===h);
+    });
+    document.querySelectorAll("nav a").forEach(function(a){
+      a.classList.toggle("on",a.getAttribute("data-s")===h);
+    });
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange",show);
+  show();
+})();
+</script>
+</body>
+</html>
